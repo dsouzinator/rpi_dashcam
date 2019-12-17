@@ -19,6 +19,6 @@ A Buck Converter steps down the input 12V to 5V output. It also smoothes the fal
 Refer to the circuit diagram for more details.
 
 
-# #Software
+## Software
 
 Coming soon
