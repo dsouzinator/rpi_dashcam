@@ -1,7 +1,7 @@
-# rpi_dashcam
+# RPi Dashcam
 A Raspberry Pi based dashcam
 
-The system has the ability to measure from upto 4 webcams at once. 
+The system has the ability to record from upto 4 webcams at once. 
 Saved video can be either logged to an external USB flash drive or memory card.
 
 ## Hardware
@@ -17,3 +17,8 @@ The volage divider outputs less than 3.3V and acts to sense when the car has bee
 A Buck Converter steps down the input 12V to 5V output. It also smoothes the falling capacitor voltage as it discharges during a power cut.
 
 Refer to the circuit diagram for more details.
+
+
+# #Software
+
+Coming soon
