@@ -21,4 +21,11 @@ Refer to the [circuit diagram](circuit_diagram.PNG) for more details.
 
 ## Software
 
-Coming soon
+The python script performs several functions:
+* Starts recording sessions on all cameras
+* Creates and stores all recordings from each session into a common folder
+* Deletes old files to free up space when the number of files increases beyond a certain limit or when memory crosses a certain threshold
+* Stops recording when car has been turned off and safely shutdowns the RPi
+* The script has two classes Camera and Management. The Camera class creates recording sessions for each camera. The Management class manages recording sessions and files.
+* Look at the [script](dashcam.py) for more information
+
