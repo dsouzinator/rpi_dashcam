@@ -16,7 +16,7 @@ The volage divider outputs less than 3.3V and acts to sense when the car has bee
 
 A Buck Converter steps down the input 12V to 5V output. It also smoothes the falling capacitor voltage as it discharges during a power cut.
 
-Refer to the circuit diagram for more details.
+Refer to the [circuit diagram](circuit diagram.PNG) for more details.
 
 
 ## Software
