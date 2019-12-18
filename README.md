@@ -31,6 +31,6 @@ The python script performs several functions:
 
 **conclusion notes**
 This setup assumes the car power goes off whenever the ignition key is turned off.
-Future work includes:
-  -* connecting a Real Time Clock
-  -* circuit and script when car ignition does not turn off power(can do away with capacitor)
+Future work includes:  
+  * connecting a Real Time Clock  
+  * circuit and script when car ignition does not turn off power(can do away with capacitor)  
