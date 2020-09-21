@@ -17,6 +17,7 @@ class Camera():
 		self.cameras = {0:'A', 1:'B',2:'C',3:'D', 4:'E'}
 		self.cam_id = cam_id
 		self.frame_rate = frame_rate
+		
 
 	def record(self, path, name, stop, time_stamp = True):
 		"""create record object and record videos to file"""
