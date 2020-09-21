@@ -17,9 +17,9 @@ class Camera():
 		self.cameras = {0:'A', 1:'B',2:'C',3:'D', 4:'E'}
 		self.cam_id = cam_id
 		self.frame_rate = frame_rate
-		
 
 	def record(self, path, name, stop, time_stamp = True):
+
 		"""create record object and record videos to file"""
 		cap = cv2.VideoCapture(self.cam_id)
 		vid_cod = cv2.VideoWriter_fourcc('M','P','E','G')
@@ -83,6 +83,7 @@ class Management():
 			while len(os.listdir(self.path)) > self.del_files_count or (disk.free // (2**30)) < self.memory_gb:   #TODO change shutil/ psutil for 2.7/3.7
 				file = 	os.listdir(self.path)
 				file.sort()
+
 				shutil.rmtree(os.path.join(self.path,file[0]))
 				disk = psutil.disk_usage(self.path)
 			time.sleep(30*60)
@@ -102,6 +103,7 @@ class Management():
 		GPIO.setmode(GPIO.BCM)
 		GPIO.setup(port, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 		GPIO.add_event_detect(port, GPIO.FALLING, callback=self.shutdown_pi, bouncetime=300)
+
 
 
 def main():
@@ -124,6 +126,7 @@ def main():
 				x.join()
 			m.stop_threads = False
 			camera_thread = m.begin_record(camera_frame_rate)
+
 
 
 main()
