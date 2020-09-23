@@ -1,6 +1,5 @@
 #!/usr/bin/python
 
-
 import cv2
 import datetime
 import os
