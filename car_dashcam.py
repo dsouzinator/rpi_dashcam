@@ -1,3 +1,6 @@
+#!/usr/bin/python
+
+
 import cv2
 import datetime
 import os
@@ -73,7 +76,7 @@ class Manager():
             proc.start()
 
 
-    def shutdown_pi(self):
+    def shutdown_pi(self, port):
         """ stop recording from all cameras, switch off the pi"""
         self.event.set()
         for x in self.processes:
@@ -85,7 +88,7 @@ class Manager():
         """ setup  GPIO to detect external interrupt"""
         GPIO.setmode(GPIO.BCM)
         GPIO.setup(port, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
-        GPIO.add_event_detect(port, GPIO.FALLING, callback=self.shutdown_pi, bouncetime=300)
+        GPIO.add_event_detect(port, GPIO.RISING, callback=self.shutdown_pi, bouncetime=300)
 
 
 if __name__ == '__main__':
